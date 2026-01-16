@@ -1,0 +1,114 @@
+/* Main container takes full viewport width and height */
+.signup-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    width: 100vw;  /* Full viewport width */
+    overflow: hidden;
+}
+
+.signup-form {
+    width: 30%;           /* Responsive width based on parent container */
+    padding: 5vw;         /* Proportional padding */
+    font-size: 1vw;       /* Font size relative to viewport width */
+}
+
+.signup-form input {
+    width: 100%;          /* Input fields take full width inside form */
+    padding: 1vw;         /* Proportional padding inside the input fields */
+    margin-bottom: 2vw;   /* Spacing between input fields */
+    font-size: 1vw;       /* Input text size based on viewport width */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.signup-form button {
+    width: 100%;          /* Button takes full width of parent */
+    padding: 1vw;         /* Proportional padding */
+    font-size: 1vw;       /* Font size relative to viewport width */
+    background: #34A0A4;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 0.5vw; /* Add space between buttons */
+}
+
+.signup-form button:hover {
+    background-color: #08868f; /* Darken button on hover */
+}
+
+/* Background size responsive with viewport width */
+.background {
+    width: 50vw;          /* Responsive width based on viewport */
+    background: url(/public/images/login_screen_graphic.png) no-repeat center center;
+    background-size: cover;
+    height: 100vh;        /* Full viewport height */
+}
+
+.create {
+    color: #2214E7;
+    font-family: Inter, sans-serif;
+    font-size: 2vw;       /* Font size relative to viewport width */
+    font-weight: 500;
+    line-height: normal;
+    margin-left: 4vw;
+    margin-right: -5vw;   /* Move form 2vw to the right */
+}
+
+.form {
+    font-size: 2vw;       /* Responsive form text size */
+    box-sizing: border-box;
+    margin-left: 4vw;
+    margin-right: -5vw;   /* Move form 2vw to the right */
+}
+
+/* Ensures images are responsive */
+img {
+    height: auto;
+    max-width: 100%;
+}
+
+/* Add border styles for valid and invalid input fields */
+input.valid {
+    border: 2px solid green;
+  }
+  
+  input.invalid {
+    border: 2px solid red;
+  }
+
+/* Style for password requirements list */
+.password-requirements {
+    color: grey;
+    font-size: 0.5em; /* Smaller text */
+    margin-top: -0.5em; /* Space between the input field and the list */
+    list-style-type: disc; /* Bullet points */
+    padding-left: 1.5em; /* Indent the list */
+  }  
+  
+/* Style for met requirements */
+.password-requirements li.met {
+    color: green;
+}
+
+.password-match-message {
+    font-size: 0.5em; /* Small font */
+    margin-top: -0.5em;
+    text-align: left; /* Align text to the left */
+    padding-left: 0.2em; /* Slight padding for alignment */
+    padding-bottom: 0.5em;
+  }
+  
+  /* Red color for mismatch */
+  .password-match-message.no-match {
+    color: red;
+  }
+  
+  /* Green color for match */
+  .password-match-message.match {
+    color: green;
+  }
+  

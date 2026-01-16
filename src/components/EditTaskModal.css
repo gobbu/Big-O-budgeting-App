@@ -1,0 +1,92 @@
+/* Add task popup styling */
+.edit-task-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 600px;
+}
+
+.edit-task-popup h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #343a40;
+}
+
+.edit-task-popup form div {
+    margin-bottom: 15px;
+}
+
+.edit-task-popup input[type="text"],
+.edit-task-popup input[type="date"],
+.edit-task-popup textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #495057;
+}
+
+.edit-task-popup input[type="text"]:focus,
+.edit-task-popup input[type="date"]:focus,
+.edit-task-popup textarea:focus {
+    border-color: #80bdff;
+    outline: none;
+}
+
+/* Notes text area */
+.edit-task-popup textarea {
+    height: 100px;
+    resize: none;
+}
+
+/* Character count below input fields */
+.edit-task-popup span {
+    font-size: 12px;
+    color: #868e96;
+    display: block;
+    margin-top: 5px;
+    text-align: right;
+}
+
+/* Task form buttons */
+.task-form-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.task-form-buttons button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.task-form-buttons button:hover {
+    background-color: #0056b3;
+}
+
+.task-form-buttons .cancel {
+    background-color: #6c757d;
+}
+
+.task-form-buttons .cancel:hover {
+    background-color: #5a6268;
+}
+
+.task-form-buttons .delete {
+    background-color: red;
+}
+
+.task-form-buttons .delete:hover {
+    background-color: darkred;
+}

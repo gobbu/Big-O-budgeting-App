@@ -1,0 +1,348 @@
+/* Sidebar styles */
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: #8BC34A;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.sidebar-content {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.sidebar-button {
+    display: flex;
+    align-items: center;
+    background-color: #7CB342;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin: 10px 0;
+    cursor: pointer;
+    text-align: left;
+}
+
+.sidebar-button:hover {
+    background-color: #6FA22D;
+}
+
+.button-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+/* old content wrapper */ 
+/* .content-wrapper {
+    margin-left: 270px;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: calc(100% - 270px);
+    gap: 20px;
+} */
+
+/* Update content wrapper to stack elements vertically */
+.content-wrapper {
+    margin-left: 270px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column; /* Changed from row to column */
+    width: calc(100% - 270px);
+    gap: 20px;
+}
+
+
+
+/* old Work Hours and Calendar Container */
+/* .workhours-calendar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+} */
+
+/* Update the main container to use flexbox */
+.workhours-calendar-container {
+    display: flex;
+    flex-direction: row; /* Changed from column to row */
+    gap: 20px;
+    width: 100%;
+}
+
+
+/* old Work Hours input box styling */
+/* .workhours-input-box {
+    width: 230px;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+} */
+ 
+
+/* Update work hours input box positioning */
+.workhours-input-box {
+    width: 250px; /* Increased width slightly */
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-left: 2px; /* Add space between calendar and input box */
+}
+
+/* Actual input field */
+.workhours-input-box input {
+    display: block;
+    width: calc(100% - 40px);
+    margin-bottom: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #333; /* Added rounded corners for input text box */
+    font-size: 14px;
+}
+
+/* Dropdown for job selector */
+.workhours-input-select {
+    display: block;
+    /* width: calc(100% - 40px); */
+    width: 93.5%;
+    margin-bottom: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #333; /* Same as input border */
+    font-size: 14px;
+}
+
+.workhours-input-box button {
+    background-color: #7CB342;
+    color: white;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.workhours-input-box button:hover {
+    background-color: #6FA22D;
+}
+
+/* OLD Calendar Container */
+/* .calendar-container {
+    width: 900px;
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+    flex-grow: 1;
+} */
+
+/* Move calendar container styles up */
+.calendar-container {
+    flex: 1; /* Allow calendar to grow */
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px; /* Add space below calendar */
+}
+
+
+/* old Calendar styling */
+/* .calendar-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    font-size: 24px;
+} */
+
+/* Update calendar header for better spacing */
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    margin-bottom: 0.5rem;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* old month year container */ 
+/* .month-year-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+} */
+
+.month-year-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* This spreads out the elements */
+    width: 100%; /* Make container full width */
+    padding: 0 20px; /* Add some padding on the sides */
+    position: relative; /* For absolute positioning of buttons */
+}
+/*old week range */ 
+/* .week-range {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #555;
+} */
+
+.week-range {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 0.5rem;
+    text-align: center;
+}
+
+
+.calendar-button {
+    background-color: #d9d9d9;
+    border: none;
+    font-size: 40px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    z-index: 1; /* ensure buttons stay above month text*/ 
+}
+
+.days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    padding: 10px;
+    background-color: #f0f0f0;
+}
+
+.cell {
+    padding: 20px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    text-align: center;
+    margin: 2px;
+    height: 60px;
+}
+
+.cell div {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #555;
+}
+
+.cell:hover {
+    background-color: #e0e0e0;
+}
+
+.empty {
+    background-color: #f5f5f5;
+    height: 60px;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+/* old Weekly Job Hours Panel */
+/* .weekly-job-hours-panel {
+    width: 300px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+    margin-top: 20px;
+    text-align: left;
+} */
+
+
+.weekly-job-hours-panel {
+    width: 250px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    text-align: left;
+    margin-left: 2px; /* Align with work hours input box */
+}
+
+.weekly-job-hours-panel h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.job-hours-entry {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.job-hours-total {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #ddd;
+    font-size: 18px;
+}
+
+/* Input container */
+.input-container {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.input-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 5px;
+}
+
+/* new style added */ 
+/* Right side container for input and weekly hours */
+.right-side-container {
+    display: flex;
+    flex-direction: column;
+    width: 300px; /* Match the width of the input box */
+    gap: 20px;
+}
+
+.month-year {
+    position: absolute;  /* Takes the month text out of normal document flow */
+    left: 50%;          /* Positions the left edge at center of container */
+    transform: translateX(-50%);  /* Shifts element left by half its width */
+    font-size: x-large;
+    font-weight: bold;
+}
+
+.current-day {
+    background-color: #A8E6CF; /* Yellow background */
+    font-weight: bold;
+    border-radius: 0;
+}

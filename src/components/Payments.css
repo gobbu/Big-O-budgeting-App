@@ -1,0 +1,75 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.modal-window {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+  
+.options-container {
+    margin: 15px 0;
+}
+  
+.modal-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+  
+.modal-button {
+    position: relative; /* Position relative to allow absolute positioning inside */
+    width: 200px; /* Set width */
+    height: 200px; /* Set height */
+    background-color: rgb(241, 161, 181); /* Set background color */
+    color: rgb(0, 0, 0); /* Set text color */
+    border: none; /* Remove border */
+    border-radius: 8px; /* Optional: add rounded corners */
+    cursor: pointer; /* Change cursor on hover */
+    display: flex; /* Center content */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    font-weight: bold; /* Make text bold */
+}
+
+.modal-button .plus {
+    font-size: 100px; /* Adjust font size for the + symbol */
+    position: absolute; /* Position it absolutely */
+    top: 40px; /* Move it towards the top */
+    left: 50%; /* Center it horizontally */
+    transform: translateX(-50%); /* Center alignment correction */
+}
+
+.modal-button .label {
+    font-size: 18px; /* Adjust font size for text */
+    position: absolute; /* Position the text absolutely */
+    bottom: 10px; /* Move it towards the bottom */
+    left: 50%; /* Center it horizontally */
+    transform: translateX(-50%); /* Center alignment correction */
+}
+
+.modal-button:hover {
+    background-color: rgb(240, 145, 145); /* Change color on hover */
+}
+
+.modal-overlay {
+    position: fixed; /* Ensure it's fixed */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Dim background */
+    z-index: 1000; /* Ensure it overlays other elements */
+}
+
+  
+  

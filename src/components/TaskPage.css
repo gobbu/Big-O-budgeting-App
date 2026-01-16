@@ -1,0 +1,149 @@
+/* Original TaskPage.css styling */
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: #8BC34A;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.sidebar-content {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.sidebar-button {
+    display: flex;
+    align-items: center;
+    background-color: #7CB342;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin: 10px 0;
+    cursor: pointer;
+    text-align: left;
+}
+
+.sidebar-button:hover {
+    background-color: #6FA22D;
+}
+
+.button-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.task-page {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    min-height: 100vh; /* Ensure it takes the full viewport height */
+    height: 100vh; /* Set exact viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow: hidden; /* Prevent scrolling within the task-page */
+}
+
+
+.tasks-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+    margin-left: 300px; /* Shift the container to the right */
+    margin-top: 50px;  /* Move the container slightly down */
+}
+
+h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #495057;
+}
+
+/* Ensure task items retain their style */
+.task-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px;
+    border-bottom: 1px solid #e9ecef;
+    background-color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+.task-item:hover {
+    background-color: #f1f3f5;
+}
+
+.task-item input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.task-item.completed span {
+    text-decoration: line-through;
+    color: #868e96;
+}
+
+.add-task-btn {
+    background-color: #28a745;
+    color: white;
+    font-size: 24px;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+.add-task-btn:hover {
+    background-color: #218838;
+}
+
+h3 span {
+    color: red;
+}
+
+p {
+    color: #868e96;
+    font-size: 14px;
+    text-align: center;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #e9ecef;
+    font-family: Arial, sans-serif;
+}
+
+@media (max-width: 1024px) {
+    .tasks-container {
+        transform: scale(0.9);
+        margin-left: 270px;
+    }
+    h2 {
+        font-size: 22px;
+    }
+    h3 {
+        font-size: 16px;
+    }
+    .task-item {
+        padding: 6px;
+    }
+}

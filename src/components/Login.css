@@ -1,0 +1,103 @@
+/* Main container takes full viewport width and height */
+.login-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    width: 100vw;  /* Full viewport width */
+}
+
+/* Login form is 20% of the width of its parent container */
+.login-form {
+    width: 30%;           /* Adjusts with screen size */
+    padding: 5vw;         /* Proportional padding based on viewport width */
+    font-size: 2vw;       /* Font size relative to viewport width */
+    margin-left: 4vw;
+    margin-right: -5vw;
+}
+
+.login-form input {
+    width: 100%;          /* Input fields take full width inside form */
+    padding: 0.5vw;       /* Padding based on viewport width */
+    margin-bottom: 1vw;   /* Spacing between input fields */
+    font-size: vw;     /* Font size relative to viewport width */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.login-form button {
+    width: 100%;          /* Button takes full width of parent */
+    padding: 1vw;       /* Proportional padding */
+    font-size: 1vw;     /* Font size based on viewport width */
+    background: #34A0A4;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 0.5vw; /* Add space between buttons */
+}
+
+.login-form button:hover {
+    background-color: #08868f; /* Darken button on hover */
+}
+
+/* Background size responsive with viewport width */
+.background {
+    width: 50vw;          /* Responsive width based on viewport */
+    height: 100vh;        /* Full viewport height */
+    background-size: cover;
+    z-index: 1;
+}
+
+/* Budget icon responsive, maintaining size based on viewport */
+.budget-icon {
+    width: 30vw;          /* Adjust size based on viewport width */
+    height: 25vw;         /* Maintain proportional height */
+    position: fixed;      /* Fixed position */
+    top: 50%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.logging-in {
+    color: #2214E7;
+    font-family: Inter, sans-serif;
+    font-size: 2vw;       /* Responsive font size */
+    font-weight: 500;
+    line-height: normal;
+}
+
+.form {
+    font-size: 2vw;       /* Responsive form text size */
+    box-sizing: border-box;
+    
+}
+
+/* Ensures images are responsive */
+img {
+    height: auto;
+    max-width: 100%;
+}
+
+/* Navigation Bar  for about us button*/ 
+.nav-bar {
+    position: absolute; /* Make it relative to the gradient container */
+    top: 10px; /* Adjust spacing from the top */
+    left: 10px; /* Adjust spacing from the left */
+    z-index: 10; /* Ensure it appears above the gradient */
+  }
+  
+  .nav-button {
+    background-color: transparent; /* Match your design */
+    border: none;
+    color: black; /* Adjust color for contrast */
+    font-size: x-large;
+    cursor: pointer;
+  }
+  
+  
+.nav-button:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,14 @@
+SELECT * FROM test; to select the data 
+
+SHOW TABLES; to show the tables 
+
+start development server :  php -S localhost:8000 
+
+sql start : mysql -u root -p
+
+./vendor/bin/phpunit --testdox tests/DatabaseTest.php #use this for the test cases 
+
+SHOW DATABASES; # to show the databases in sql
+
+USE my_php_db; #navigate to this db 
+

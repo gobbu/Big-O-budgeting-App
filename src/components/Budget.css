@@ -1,0 +1,343 @@
+.budget-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+}
+
+.budget-container {
+    width: 90%;
+    max-width: 2000px;
+    padding: 0 20px;
+    padding-left: 250px;
+    padding-top: 50px;
+}
+
+.budget-section {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-bottom: 50px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.weekly-header, .monthly-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.week-navigation, .month-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 600px;
+    max-width: 100%;
+    margin: 0 auto;
+    gap: 10px;
+}
+
+.week-display, .month-display {
+    font-weight: bold;
+    font-size: 1.2em;
+    text-align: center;
+    white-space: nowrap;
+    flex-grow: 1;
+}
+
+.week-arrow, .month-arrow {
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.week-arrow:hover, .month-arrow:hover {
+    color: #7ED957;
+}
+
+.budget-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.control-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.control-button img {
+    width: 20px;
+    height: 20px;
+}
+
+.control-button:hover {
+    transform: scale(1.1);
+}
+
+.add-button {
+    font-size: 1.5em;
+    background-color: #7ED957;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.add-button:hover {
+    background-color: #6bc84b;
+    transform: scale(1.1);
+}
+
+.budget-section h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.budget-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.budget-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.budget-category {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.category-text {
+    font-weight: bold;
+}
+
+.circle-text-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+}
+
+.category-icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+.budget-bar-container {
+    width: 100%;
+    background-color: #e0e0e0;
+    height: 25px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.1);
+    flex-grow: 1;
+}
+
+.budget-bar {
+    height: 100%;
+    border-radius: 15px;
+    transition: width 0.5s ease;
+}
+
+.budget-spent, .budget-limit {
+    font-weight: bold;
+    min-width: 60px;
+    text-align: right;
+}
+
+.budget-details {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 2;
+}
+
+/* Modal Styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+/* Modal Styles */
+
+.modal-content {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 400px;
+    max-width: 90%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content.modal-wide { /* New class for making the modal wider */
+    width: 600px; /* Increased width for better spacing */
+}
+
+.modal-body {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.modal-body input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: space-between; /* move buttons to opposite sides */
+    gap: 10px;
+    margin-top: 20px;
+    padding: 0 20px;
+}
+
+.save-button {
+    background-color: #7ED957;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.save-button:hover {
+    background-color: #6bc84b;
+    transform: scale(1.05);
+}
+
+.cancel-button {
+    background-color: #ffffff;
+    color: #ed0404;
+    border: 1px solid #7ED957;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cancel-button:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.05);
+}
+
+/* Icon Selection */
+.icon-selection {
+    margin-bottom: 20px;
+}
+
+.icon-grid {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    margin-top: 10px;
+    flex-wrap: wrap; /* Allow icons to wrap onto the next line if needed */
+}
+
+.icon-option {
+    width: 80px;  /* Increased the size to better accommodate the image */
+    height: 80px; /* Increased the size to better accommodate the image */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #e0e0e0;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+
+.icon-option img {
+    max-width: 60%;    /* Ensure the image does not exceed the container */
+    max-height: 60%;   /* Ensure the image does not exceed the container */
+    width: auto;        /* Adjust width automatically to maintain aspect ratio */
+    height: auto;       /* Adjust height automatically to maintain aspect ratio */
+    display: block;     /* Center the image within its container */
+    margin: auto;       /* Apply automatic margins to center the image */
+    border-radius: 20%; /* Round the image if necessary */
+    object-fit: contain; /* Ensures that the image fits well within the circle */
+}
+
+.icon-option.selected {
+    background-color: #7ED957;
+}
+
+.icon-option:hover {
+    transform: scale(1.1);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 600px) {
+    .budget-container {
+        width: 95%;
+    }
+
+    .budget-section {
+        padding: 15px;
+    }
+
+    .budget-bar-container {
+        height: 20px;
+    }
+
+    .category-icon,
+    .pink-circle {
+        width: 30px;
+        height: 30px;
+    }
+
+    .week-display, .month-display {
+        font-size: 1em;
+    }
+
+    .control-button img {
+        width: 18px;
+        height: 18px;
+    }
+}

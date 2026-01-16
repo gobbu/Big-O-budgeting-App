@@ -1,0 +1,101 @@
+CREATE TABLE pay_stubs (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  user_id INT,
+  jobTitle VARCHAR(255),
+  hoursWorked FLOAT,
+  currentRate FLOAT,
+  totalPay FLOAT,
+  payDate DATE,
+  federalTaxes FLOAT DEFAULT 0,
+  state VARCHAR(2),
+  other FLOAT DEFAULT 0,
+  totalTaxes FLOAT DEFAULT 0,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE payments (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  user_id INT,
+  type VARCHAR(255),
+  whoIsPaying VARCHAR(255),
+  whoIsGettingPaid VARCHAR(255),
+  transactionAmount DECIMAL(10, 2),
+  transactionDate DATE,
+  transactionNote TEXT,
+  state VARCHAR(255),
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+ALTER TABLE payments
+ADD COLUMN category VARCHAR(255);
+
+CREATE TABLE pay_cycles (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,
+    jobTitle VARCHAR(255) NOT NULL,
+    currentRate DECIMAL(10, 2) NOT NULL,
+    cycleStartDate DATE NOT NULL,
+    cycleFrequency ENUM('Weekly', 'Bi-weekly', 'Monthly', 'Annually') NOT NULL,
+    amountOfWeeks INT DEFAULT 0,  -- New column for the number of weeks
+    federalTaxes DECIMAL(10, 2),
+    state VARCHAR(50),
+    other DECIMAL(10, 2),
+    totalTaxes DECIMAL(10, 2),
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+);
+
+CREATE TABLE budgets (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  user_id INT NOT NULL,
+  category VARCHAR(255),
+  period VARCHAR(10), 
+  spent DECIMAL(10,2),
+  limit_amount DECIMAL(10,2),
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  date DATE,
+  icon VARCHAR(255)
+  );
+  
+CREATE TABLE tasks (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  username VARCHAR(50),
+  user_id INT NOT NULL,
+  task_name VARCHAR(128),
+  due_date DATE,
+  task_notes VARCHAR(512),
+  task_complete TINYINT(1) DEFAULT 0,
+  overdue TINYINT(1) DEFAULT 0,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+  );
+
+CREATE TABLE work_hours(
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  user_id INT,
+  jobTitle VARCHAR(255),
+  workDate DATE,
+  hoursWorked FLOAT,
+  calculatedPay FLOAT,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+ );
+
+
+CREATE TABLE notifications (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50),
+    notification_text TEXT NOT NULL,
+    is_read BOOLEAN DEFAULT FALSE,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE events (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  username VARCHAR(50),
+  user_id INT NOT NULL,
+  event_name VARCHAR(128),
+  event_location VARCHAR(128),
+  event_start TIMESTAMP,
+  event_end TIMESTAMP,
+  event_notes VARCHAR(512),
+  event_date DATE,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);

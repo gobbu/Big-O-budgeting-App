@@ -1,0 +1,203 @@
+.schedule-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.schedule-popup {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 400px;
+    max-height: 80%;
+    overflow-y: auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.schedule-container {
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    position: relative;
+}
+
+.schedule-table {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+}
+
+.time-block {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fff;
+    min-height: 45px; /* Base height representing 30 minutes */
+}
+
+.occupied {
+    background-color: #d9f7be;
+    color: #000000;
+    width: 100%;
+    position: relative;
+    border-radius: 4px;
+    padding: 4px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+
+.occupied:hover {
+background-color:  #a7e423;
+}
+
+.time-label {
+    width: 50px;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.event-details {
+    margin-left: 10px;
+}
+
+.empty-block {
+    color: #aaa;
+    margin-left: 10px;
+}
+
+.schedule-button-container {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.close-button {
+    background-color: red;
+    border: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.close-button:hover {
+    background-color: darkred;
+    transform: scale(1.1);
+}
+
+.add-event-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    font-size: 25px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.add-event-button:hover {
+    background-color: #45a049;
+}
+
+.schedule-popup::-webkit-scrollbar {
+    width: 8px;
+}
+
+.schedule-popup::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.schedule-popup::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 4px;
+}
+
+.schedule-popup::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
+.schedule-slider-wrapper {
+    position: relative;
+    top: 10px;
+    left: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    z-index: 10;
+}
+
+.slider-text {
+    color: #000;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.slider-label {
+    position: relative;
+    width: 80px;
+    height: 25px;
+    background-color: #008CBA;
+    border-radius: 12.5px;
+    transition: background-color 0.3s ease;
+}
+
+.slider-label::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 4px;
+    width: 21px;
+    height: 21px;
+    background-color: #fff;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    transition: left 0.3s ease;
+}
+
+.slider-toggle:checked + .slider-label::before {
+    left: 55px;
+}
+
+.slider-toggle:checked + .slider-label {
+    background-color: #0077a1;
+}
+
+.slider-toggle {
+    display: none;
+}
+
+@media (max-width: 1024px) {
+    .schedule-popup {
+        margin-left: 250px;
+    }
+}

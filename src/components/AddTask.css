@@ -1,0 +1,116 @@
+/* Add task popup styling */
+.add-task-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-26%, -50%);
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 600px;
+}
+
+.add-task-popup h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #343a40;
+}
+
+.add-task-popup form div {
+    margin-bottom: 15px;
+}
+
+.add-task-popup input[type="text"],
+.add-task-popup input[type="date"],
+.add-task-popup textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #495057;
+}
+
+.add-task-popup input[type="text"]:focus,
+.add-task-popup input[type="date"]:focus,
+.add-task-popup textarea:focus {
+    border-color: #80bdff;
+    outline: none;
+}
+
+/* Notes text area */
+.add-task-popup textarea {
+    height: 100px;
+    resize: none;
+}
+
+/* Character count below input fields */
+.add-task-popup span {
+    font-size: 12px;
+    color: #868e96;
+    display: block;
+    margin-top: 5px;
+    text-align: right;
+}
+
+/* Task form buttons */
+.task-form-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.task-form-buttons button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.task-form-buttons button:hover {
+    background-color: #0056b3;
+}
+
+.task-form-buttons .cancel {
+    background-color: #6c757d;
+}
+
+.task-form-buttons .cancel:hover {
+    background-color: #5a6268;
+}
+
+@media (max-width: 1200px) {
+    .add-task-popup {
+        transform: translate(-45%, -50%) scale(0.9); /* Slightly shrink and shift right */
+        width: 80%;
+        max-width: 550px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .add-task-popup {
+        transform: translate(-26%, -50%) scale(0.85); /* Shrink more and shift further right */
+        width: 75%;
+        max-width: 500px;
+    }
+}
+
+@media (max-width: 768px) {
+    .add-task-popup {
+        transform: translate(-35%, -50%) scale(0.8); /* Shrink further for smaller screens */
+        width: 80%;
+        max-width: 500px;
+    }
+}
+
+@media (max-width: 480px) {
+    .add-task-popup {
+        transform: translate(-30%, -50%) scale(0.75); /* Maximum shrink and shift for very small screens */
+        width: 90%;
+        max-width: 400px;
+    }
+}

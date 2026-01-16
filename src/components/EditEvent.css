@@ -1,0 +1,98 @@
+/* Add event popup styling */
+.edit-event-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 600px;
+}
+
+.edit-event-popup h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #343a40;
+}
+
+.edit-event-popup form div {
+    margin-bottom: 15px;
+}
+
+.edit-event-time-inputs{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.edit-event-popup input[type="text"],
+.edit-event-popup input[type="time"],
+.edit-event-popup textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #495057;
+}
+
+.edit-event-popup input[type="text"]:focus,
+.edit-event-popup input[type="time"]:focus,
+.edit-event-popup textarea:focus {
+    border-color: #80bdff;
+    outline: none;
+}
+
+/* Notes text area */
+.add-event-popup textarea {
+    height: 100px;
+    resize: none;
+}
+
+/* Character count below input fields */
+.edit-event-popup span {
+    font-size: 12px;
+    color: #868e96;
+    display: block;
+    margin-top: 5px;
+    text-align: right;
+}
+
+/* Task form buttons */
+.edit-event-form-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.edit-event-form-buttons button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.edit-event-form-buttons button:hover {
+    background-color: #0056b3;
+}
+
+.edit-event-form-buttons .cancel {
+    background-color: #6c757d;
+}
+
+.edit-event-form-buttons .cancel:hover {
+    background-color: #5a6268;
+}
+
+.edit-event-form-buttons .delete {
+    background-color: red;
+}
+
+.edit-event-form-buttons .delete:hover {
+    background-color: darkred;
+}

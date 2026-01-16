@@ -1,0 +1,56 @@
+.about-us-container {
+    text-align: center;
+    padding: 2rem;
+    background: url('https://se-dev.cse.buffalo.edu/CSE442/2024-Fall/alee76/build/images/aboutusbackground.jpg'); 
+    /* min-height: 100vh;  */
+    background-size: cover; 
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+    /* color: #333; */
+}
+
+.about-us-title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #000000;
+}
+
+.about-us-story {
+    margin: 1.5rem auto;
+    max-width: 600px;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color:#000000;
+}
+.about-us-story p {
+    color: black; 
+}
+
+.team-members {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.team-member {
+    margin: 1rem;
+    text-align: center;
+}
+
+.member-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.member-name {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: black;
+}

@@ -1,0 +1,293 @@
+.rewards-page {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    min-height: 100vh; /* Full viewport height */
+    height: 100vh; /* Exact viewport height */
+    display: flex;
+    flex-direction: column; /* Navbar at the top, content below */
+    overflow: hidden; /* Prevent scrolling */
+}
+
+.rewards-content {
+    margin-left: 300px; /* Keep navbar offset */
+    padding: 20px;
+    display: block; /* Reset layout to block */
+    position: relative; /* Allows positioning of milestones box */
+}
+
+.cash-points {
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(3, 0, 0);
+    margin-bottom: 20px; /* Add spacing below the header */
+}
+
+.balance-box {
+    background-color: #007bff; /* Blue color */
+    padding: 30px;
+    border-radius: 8px; /* Rounded corners */
+    margin-top: 10px; /* Space below the header */
+    max-width: 300px; /* Limit the box width */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.balance-box p {
+    margin: 0; /* Remove default paragraph margin */
+    font-size: 25px; /* Adjust text size */
+    font-weight: bold;
+    color: white;
+}
+
+.balance-amount {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+.milestones-text {
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+}
+
+
+.milestones-area {
+    position: absolute; /* Position relative to .rewards-content */
+    margin-top: 10px;
+    top: 50px; /* Adjust based on the balance box height */
+    left: 600px; /* Position to the right of the balance box */
+    
+}
+
+.milestones-box {
+    padding: 50px;
+    border-radius: 8px; /* Rounded corners */
+    width: 300px; /* Restrict width */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    text-align: left; /* Left-align text */
+    background-color: #c8cacc;
+}
+
+.milestones-box p {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px; /* Space below the heading */
+}
+
+.checkbox-item input[type="checkbox"] {
+    appearance: none; /* Remove default checkbox style */
+    width: 20px;
+    height: 20px;
+    background-color: #007bff; /* Blue background */
+    border: none; /* Remove border */
+    border-radius: 4px; /* Rounded corners */
+    margin-right: 10px;
+    cursor: pointer;
+    display: inline-block;
+    position: relative; /* Needed for the checkmark placement */
+}
+
+.checkbox-item input[type="checkbox"]:checked {
+    background-color: #007bff; /* Keep blue background when checked */
+}
+
+.checkbox-item input[type="checkbox"]::after {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 7px;
+    width: 3px;
+    height: 12px;
+    border: solid rgb(0, 0, 0); /* White checkmark */
+    border-width: 0 4px 4px 0;
+    transform: rotate(40deg); /* Make the checkmark */
+    opacity: 0; /* Hidden by default */
+    transition: opacity 0.2s ease-in-out;
+}
+
+.checkbox-item input[type="checkbox"]:checked::after {
+    opacity: 1; /* Show checkmark when checked */
+}
+
+.checkbox-item label {
+    color: rgb(0, 0, 0); /* White text */
+    font-size: 20px;
+    cursor: pointer; /* Clickable label */
+    user-select: none; /* Prevent text selection when clicking */
+}
+
+.checkbox-item {
+    display: flex;
+    align-items: center; /* Vertically align the checkbox and label */
+    margin-bottom: 10px; /* Space between each checkbox item */
+}
+
+/* Avatars Area */
+.avatars-container {
+    position: absolute;
+    top: 400px; /* Adjust this based on the position of your milestones area */
+    left: 600px; /* Adjust to the correct position */
+    width: max-content; /* Fit the box to the content */
+    
+}
+
+.avatars-text {
+    font-size: 30px;
+    font-weight: bold;
+    color: #000000; /* Blue color for the title */
+    margin-bottom: 10px; /* Space between the title and the avatars box */
+}
+
+.avatars-area {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Create 4 columns */
+    gap: 20px; /* Space between avatars */
+    padding: 20px;
+    background-color: #c8cacc;
+    border-radius: 12px; /* Rounded corners on the outer box */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.avatar-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px; /* Size of each avatar container */
+    height: 80px; /* Keep the container square */
+    border-radius: 30px; /* Rounded corners */
+    overflow: hidden;
+    padding: 5px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    cursor: pointer; /* Add a pointer cursor */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+.avatar-item:hover {
+    background-color: red; /* Change background to red when hovered */
+}
+
+.avatar-item img {
+    width: 60px; /* Avatar image size */
+    height: 60px;
+    object-fit: cover;
+    border-radius: 50%; /* Circular avatar */
+}
+
+
+/* Themes Area */
+.themes-container {
+    position: absolute;
+    top: 400px; /* Adjust based on your layout */
+    left: 0px; /* Adjust to the correct position */
+    width: max-content;
+}
+
+.themes-text {
+    font-size: 30px;
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 10px; /* Space between the title and the themes box */
+}
+
+.themes-area {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    gap: 20px; /* Space between the themes */
+    padding: 30px;
+    background-color: #c8cacc;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.theme-item {
+    position: relative; /* Make the item a positioned container for the lock icon */
+    width: 75px; /* Size of each theme color block */
+    height: 75px; /* Keep the container square */
+    border-radius: 30px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    overflow: hidden;
+}
+
+.lock-icon {
+    position: absolute;
+    top: 10px; /* Adjust based on where you want the lock to appear */
+    right: 10px; /* Adjust to move the lock icon to the corner */
+    width: 55px; /* Set a larger width for the lock icon */
+    height: 55px; /* Set a larger height for the lock icon */
+    z-index: 1; /* Ensure the lock icon appears on top of the color block */
+}
+
+.lock-icon img {
+    width: 100%; /* Make the lock icon fill the container */
+    height: 100%; /* Make the lock icon fill the container */
+    object-fit: cover; /* Ensures the lock icon maintains its aspect ratio */
+}
+
+.theme-item {
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.avatar-item {
+    border: none; /* Remove default border */
+    padding: 0;   /* Remove extra spacing */
+    cursor: pointer; /* Add pointer cursor on hover */
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 1024px) {
+    .rewards-content {
+        margin-left: 300px; /* Adjust for smaller screens */
+    }
+
+    .avatars-area{
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+    }
+
+    .avatars-container {
+        margin-top: 200px;
+        margin-left: -300px;
+    }
+
+    .themes-area {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+    }
+
+    .themes-container {
+        margin-top: 200px;
+    }
+
+    .milestones-area {
+        position: relative;
+        margin-top: 20px;
+        left: 0; /* Reset left position */
+    }
+
+    .balance-box {
+        max-width: 100%; /* Make balance box full width */
+    }
+}
+
+@media (max-width: 768px) {
+    .rewards-content {
+        margin-left: 0; /* Remove margin for very small screens */
+    }
+
+    .milestones-area, .avatars-container, .themes-container {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%; /* Make them full width */
+    }
+
+    .avatars-area, .themes-area {
+        grid-template-columns: 1fr; /* Stack items vertically on mobile */
+    }
+
+    .balance-box {
+        max-width: 100%; /* Ensure balance box takes full width on small screens */
+    }
+}

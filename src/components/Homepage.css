@@ -1,0 +1,242 @@
+/* Sidebar styles */
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: #8BC34A;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.sidebar-content {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.sidebar-button {
+    display: flex;
+    align-items: center;
+    background-color: #7CB342;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin: 10px 0;
+    cursor: pointer;
+    text-align: left;
+}
+
+.sidebar-button:hover {
+    background-color: #6FA22D;
+}
+
+.button-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+/* General page layout */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e0e0e0;
+    margin: 0;
+    padding: 0;
+}
+
+.main-content {
+    margin-left: 250px;
+    padding: 20px;
+}
+
+/* Top bar styles */
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f1f1f1;
+    padding: 10px;
+    margin-left: 250px;
+    padding-left: 25px;
+}
+
+.search-bar {
+    width: 60%;
+    padding: 8px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+}
+
+.top-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.icon-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.icon-button img {
+    width: 24px;
+    height: 24px;
+}
+
+.icon-button span {
+    margin-left: 5px;
+    font-size: 14px;
+}
+
+/* Additional styles for shared content sections */
+.shared-container {
+    display: flex;
+    justify-content: center; /*ncenter content for smaller screen */ 
+    margin-top: 20px;
+    flex-wrap: wrap; /* allows the elements to wrap into multiple rows */ 
+    gap: 20px; /* space between rows */ 
+}
+
+.shared-box {
+    flex: 1;
+    margin: 0 20px; /* Adjust space between boxes */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    min-width: 280px; /* prevents shrinking too small for smaller screens */ 
+    max-width: 400px; /* limits width to ensure three boxes per row */ 
+}
+
+.shared-box h2{
+    margin-bottom: 10px; 
+    font-weight: bold;
+}
+
+.shared-box p { 
+    margin: 10px 0; 
+}
+
+/* Notification Dropdown */
+.notification-dropdown {
+    position: absolute;
+    top: 40px; /* Adjust based on your layout */
+    right: 0; /* Align with the icon */
+    width: 250px;
+    background-color: white;
+    border: 1px solid #ddd;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 10; /* Ensure this is above other elements */
+    border-radius: 5px;
+    max-height: 300px;
+    overflow-y: auto;
+    display: none; /* Initially hidden */
+}
+
+.notification-dropdown.show {
+    display: block; /* Show the dropdown when 'show' class is added */
+}
+
+.notification-item {
+    padding: 10px; /* Add padding for visibility */
+    cursor: pointer; /* Indicate that items are clickable */
+}
+
+.notification-item:hover {
+    background-color: #f0f0f0; /* Light grey on hover */
+}
+
+.unread {
+    background-color: lightyellow; /* Highlight unread notifications */
+}
+
+.read {
+    background-color: white; /* Normal background for read notifications */
+    text-decoration: line-through; /* Optional: strike-through for read notifications */
+}
+
+.notification-item:last-child {
+    border-bottom: none; /* Remove border for last item */
+}
+
+/* Notification Badge */
+.notification-count {
+    position: absolute; /* Position it relative to the button */
+    top: -10px; /* Adjust the position as needed */
+    right: -10px; /* Adjust the position as needed */
+    background-color: red; /* Background color for visibility */
+    color: white; /* Text color */
+    border-radius: 50%; /* Make it circular */
+    padding: 2px 5px; /* Adjust padding */
+    font-size: 12px; /* Font size */
+    display: flex; /* Center the number */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+.notification-item.read {
+    background-color: lightgray; /* Change color for read notifications */
+    color: gray; /* Change text color for read notifications */
+}
+
+.notification-item.unread {
+background-color: white; /* Change color for unread notifications */
+color: black; /* Change text color for unread notifications */
+}
+
+.calendar-box { 
+    padding: 10px; 
+}
+
+.react-calendar {
+    width: 100%; 
+    border: none; /* optional: remove border */
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.2); 
+    border-radius: 10px; 
+}
+
+.task-list { 
+    list-style-type: none;
+    padding: 0; 
+    text-align: left; 
+}
+
+.task-list li { 
+    margin: 5px;
+}
+
+
+/* Media query for smaller screens (e.g., between tablet and larger desktop) */
+@media screen and (max-width: 1024px) {
+    .shared-box {
+        flex: 1 1 calc(50% - 40px); /* Two boxes per row for medium-sized screens */
+    }
+}
+
+/* Media query for tablet screens (768px and below) */
+@media screen and (max-width: 768px) {
+    .shared-box {
+        flex: 1 1 100%; /* One box per row for smaller screens */
+    }
+}
+
+/*media query for mobile screens */ 
+@media screen and (max-width: 480px) { 
+    .shared-box { 
+        flex: 1 1 100%; /*single box per row for small screens */ 
+    }
+    .sidebar { 
+        display: none !important; 
+    }
+    .main-content { 
+        margin-left:  0 !important; /*remove left margin when sidebar is hidden */ 
+    }
+    .top-bar { 
+        margin-left: 0 !important; /*adjjust top bar to align proplely */ 
+    }
+}
+

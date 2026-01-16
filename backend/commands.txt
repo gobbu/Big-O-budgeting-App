@@ -1,0 +1,11 @@
+sql start : mysql -u root -p
+
+SHOW TABLES; to show the tables in the database
+
+USE 'blank'; to naivgate to that database
+
+SELECT * FROM 'BLANK' ; To view the database
+
+in order to get the backend php calls working 
+
+use cd backend and then insert command php -S localhost:8000 

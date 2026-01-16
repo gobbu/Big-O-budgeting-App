@@ -1,0 +1,217 @@
+/* Default sidebar styles for larger screens */
+/* .sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: #8BC34A;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: all 0.3s ease;
+    display: block;
+    z-index: 1000;
+}
+
+.sidebar-content {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.sidebar-button {
+    display: flex;
+    align-items: center;
+    background-color: #7CB342;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin: 10px 0;
+    cursor: pointer;
+    text-align: left;
+}
+
+.sidebar-button:hover {
+    background-color: #6FA22D;
+}
+
+.button-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+} */
+
+
+/* new css for hamburger */ 
+/* Default sidebar styles for larger screens */
+/* .sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: #8BC34A;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: all 0.3s ease;
+    display: block;
+    z-index: 1000;
+}
+
+.sidebar.collapsed {
+    width: 60px;
+    overflow: hidden;
+}
+
+.sidebar-content {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+.sidebar-button {
+    display: flex;
+    align-items: center;
+    background-color: #7CB342;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin: 10px 0;
+    cursor: pointer;
+    text-align: left;
+}
+
+.sidebar-button:hover {
+    background-color: #6FA22D;
+}
+
+.button-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+
+.hamburger-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1001; 
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hamburger-button:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+}
+
+.hamburger-icon {
+    width: 24px;
+    height: 24px;
+    display: block;
+}
+
+.sidebar.collapsed .hamburger-button {
+    left: 50%;
+    transform: translateX(-50%);
+} */
+
+/* even newer navbar with mobile already collapsed */ 
+/* Default sidebar styles for larger screens */
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: #8BC34A;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: all 0.3s ease;
+    display: block;
+    z-index: 1000;
+}
+
+/* Add new collapsed state */
+.sidebar.collapsed {
+    width: 60px;
+    overflow: hidden;
+}
+
+.sidebar-content {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin-top: 50px; /* Make space for hamburger button */
+}
+
+.sidebar-button {
+    display: flex;
+    align-items: center;
+    background-color: #7CB342;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin: 10px 0;
+    cursor: pointer;
+    text-align: left;
+}
+
+.sidebar-button:hover {
+    background-color: #6FA22D;
+}
+
+.button-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+/* Hamburger button styles */
+.hamburger-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hamburger-button:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+}
+
+.hamburger-icon {
+    width: 24px;
+    height: 24px;
+    display: block;
+}
+
+/* When sidebar is collapsed, adjust the hamburger button */
+.sidebar.collapsed .hamburger-button {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Media query for mobile devices */
+@media screen and (max-width: 768px) {
+    .sidebar {
+        width: 60px; /* Start collapsed on mobile */
+    }
+    
+    .sidebar:not(.collapsed) {
+        width: 250px; /* Full width when expanded on mobile */
+    }
+    
+    /* Ensure hamburger button is always visible on mobile */
+    .hamburger-button {
+        display: flex;
+    }
+}

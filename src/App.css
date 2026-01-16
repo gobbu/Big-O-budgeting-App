@@ -1,0 +1,24 @@
+
+
+/* Login page background */
+.login-page {
+  background-color: #fff; /* White background for login page */
+  min-height: 100vh;
+}
+
+/* Home page background */
+.home-page {
+  background-color: #e0e0e0; /* Grey background for home page */
+  min-height: 100vh;
+}
+
+/* Signup page background */
+.signup-page {
+  background-color: #fff; /* Another color for signup page */
+  min-height: 100vh;
+}
+
+.payments-page {
+  background-color: #fff; /* Another color for signup page */
+  min-height: 100vh;
+}

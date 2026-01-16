@@ -1,0 +1,36 @@
+.overlay {
+    position: fixed; /* Fix the overlay in place */
+    top: 0; /* Position at the top */
+    left: 0; /* Position at the left */
+    width: 100vw; /* Full width of the viewport */
+    height: 100vh; /* Full height of the viewport */
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    z-index: 999; /* Ensure it is below the modal but above other content */
+}
+
+.modal-content {
+    position: fixed; /* Fix the modal content in place */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust position to center */
+    background: white; /* White background for the modal content */
+    padding: 20px; /* Inner padding */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+    width: 400px; /* Set a specific width for the modal */
+    max-width: 90%; /* Limit width to 90% of the viewport */
+    max-height: 80%; /* Limit height */
+    overflow-y: auto; /* Enable scrolling if content overflows */
+    animation: fadeIn 0.3s; /* Fade-in effect */
+}
+
+/* @keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+} */

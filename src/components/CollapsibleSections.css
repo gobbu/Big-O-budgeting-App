@@ -1,0 +1,67 @@
+/* Styles for the buttons */
+.button-container {
+    display: flex;
+    gap: 10px; /* Space between buttons */
+}
+
+.edit-button,
+.delete-button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    border: none;
+    outline: none;
+    font-weight: bold;
+}
+
+/* Edit button color */
+.edit-button {
+    background-color: #4CAF50; /* Green for edit */
+    color: white;
+}
+
+.edit-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+/* Delete button color */
+.delete-button {
+    background-color: #f44336; /* Red for delete */
+    color: white;
+}
+
+.delete-button:hover {
+    background-color: #e53935; /* Darker red on hover */
+}
+
+/* Optional: add some styling for the hover effect on the entire card */
+/* Style for the card with added space for box-shadow */
+.card {
+    padding: 20px; /* Add padding inside the card for spacing */
+    border: 1px solid #ddd;
+    margin-bottom: 15px;
+    border-radius: 8px; /* Optional: Round corners */
+    background-color: #fafafa;
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transition for shadow and hover effect */
+}
+
+/* Optional: add some styling for the hover effect on the entire card */
+.card:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Increased space for box-shadow */
+    transform: translateY(-3px); /* Optional: adds a slight lift effect on hover */
+}
+
+/* Add padding inside the card's content to ensure spacing is comfortable */
+.card p {
+    margin: 10px 0; /* Adds space between paragraphs */
+    line-height: 1.6; /* Optional: improves readability */
+}
+
+.empty-message {
+    text-align: center;
+    color: #777;
+    font-style: italic;
+    margin: 20px 0;
+}
